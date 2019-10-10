@@ -8,6 +8,7 @@ from werkzeug import secure_filename
 import sys
 import os
 
+from . import app
 
 # basic_ = str(os.path.dirname( __file__ ))
 
@@ -27,24 +28,24 @@ import os
 # from wtforms.validators import Required
 # from flask import request
 from forms import DelcarationForm
-from flask_wtf import FlaskForm
-from flask_sqlalchemy import SQLAlchemy
-from sql_settings import uri_azure_sql,conn_string
-import pyodbc
+# from flask_wtf import FlaskForm
+# from flask_sqlalchemy import SQLAlchemy
+# from sql_settings import uri_azure_sql,conn_string
+# import pyodbc
 
 
 
 
-app = Flask(__name__, template_folder="Templates")
+# app = Flask(__name__, template_folder="Templates")
 
 
 bootstrap = Bootstrap(app)
 
 
-app.config['SECRET_KEY'] = 'This is a string 1234567'
-app.config['SQLALCHEMY_DATABASE_URI'] = uri_azure_sql
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SECRET_KEY'] = 'This is a string 1234567'
+# app.config['SQLALCHEMY_DATABASE_URI'] = uri_azure_sql
+# app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 
