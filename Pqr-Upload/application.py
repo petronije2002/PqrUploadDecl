@@ -38,7 +38,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 def hello():
     print(conn_string)
     return render_template("base_menu.html", name="Pera")
-
+ 
 
 @app.route("/Submit/", methods=['GET','POST'])
 def hello_user():
