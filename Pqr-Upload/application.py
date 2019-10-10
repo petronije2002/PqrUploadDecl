@@ -4,7 +4,25 @@ import logging
 import flask
 from wtforms import TextField, BooleanField
 from werkzeug import secure_filename
-# from flask_wtf import Form
+
+import sys
+import os
+
+
+# basic_ = str(os.path.dirname( __file__ ))
+
+# if basic_ in sys.path:
+#     pass
+# else: 
+
+#     sys.path.append(basic_)
+#     basic_ = basic_ +"/Pqr-Upload"
+
+#     sys.path.append(basic_)
+
+
+
+# # from flask_wtf import Form
 # from wtforms import StringField, SubmitField
 # from wtforms.validators import Required
 # from flask import request
@@ -13,6 +31,9 @@ from flask_wtf import FlaskForm
 from flask_sqlalchemy import SQLAlchemy
 from sql_settings import uri_azure_sql,conn_string
 import pyodbc
+
+
+
 
 app = Flask(__name__, template_folder="Templates")
 
@@ -93,7 +114,7 @@ def redirect_url(e):
   
   
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
  
  
