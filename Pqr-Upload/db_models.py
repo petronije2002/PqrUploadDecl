@@ -1,4 +1,4 @@
-from applications import app
+from application import app
 
 from flask_sqlalchemy import SQLAlchemy
 # import evn variables for DB connection 
