@@ -61,8 +61,8 @@ def hello_user():
         return render_template("submitted.html",name=name)
     else:
 
-        print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME"))
-        print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID"))
+        # print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME"))
+        # print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID"))
 
         name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
         name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
