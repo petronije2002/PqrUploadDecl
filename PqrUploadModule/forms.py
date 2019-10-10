@@ -6,8 +6,6 @@ from wtforms.validators import DataRequired
 
 class DelcarationForm(FlaskForm):
 
-
-
     date_ = DateField(label='date_')
 
     description123 = StringField(label='description123')
@@ -19,7 +17,6 @@ class DelcarationForm(FlaskForm):
     incl_btw = DecimalField(label='incl_btw')
 
     file_ = FileField(label='file_')
-
 
     submit = SubmitField(label='submit')
 
