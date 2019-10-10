@@ -1,1 +1,1 @@
-from Pqr-Upload.webapp import app
+from PqrUploadModule.webapp import app

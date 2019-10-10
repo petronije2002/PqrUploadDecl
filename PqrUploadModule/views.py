@@ -9,7 +9,7 @@ import sys
 import os
 
 from . import app
-
+from . import forms
 # basic_ = str(os.path.dirname( __file__ ))
 
 # if basic_ in sys.path:
@@ -20,14 +20,12 @@ from . import app
 #     basic_ = basic_ +"/Pqr-Upload"
 
 #     sys.path.append(basic_)
-
-
-
+# from froms import DeclarationForm
 # # from flask_wtf import Form
 # from wtforms import StringField, SubmitField
 # from wtforms.validators import Required
 # from flask import request
-from forms import DelcarationForm
+# f rom forms import DelcarationForm
 # from flask_wtf import FlaskForm
 # from flask_sqlalchemy import SQLAlchemy
 # from sql_settings import uri_azure_sql,conn_string
@@ -51,7 +49,6 @@ bootstrap = Bootstrap(app)
 
 
 @app.route("/")
-
 def hello():
     
 
@@ -67,7 +64,7 @@ def hello_user():
 
     if flask.request.method=='POST':
     
-        form = DelcarationForm(flask.request.form)
+        form = forms.DelcarationForm(flask.request.form)
 
         print(form.date_.data)
         print(form.incl_btw.data)
@@ -93,9 +90,6 @@ def hello_user():
         return render_template("submit_declarations.html",name=name,submit_button_text="SUBMIT HERE")
 
 
-
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -106,16 +100,9 @@ def redirect_url(e):
     return render_template("user.html", name="Nije validirano")
 
 
-
-# @app.route("/rrr", methods= ['POST','GET'])
-# def process_form():
-#     return  #render_template("user.html", name="Pera")
- 
- 
-  
   
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
  
  
