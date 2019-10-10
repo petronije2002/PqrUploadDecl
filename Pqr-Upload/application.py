@@ -31,8 +31,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 @app.route("/")
 
 def hello():
-    print(conn_string)
-    return render_template("base_menu.html", name="Pera")
+    
+
+    name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
+    name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
+
+
+    return render_template("base_menu.html", name=name)
  
 
 @app.route("/Submit/", methods=['GET','POST'])
@@ -49,17 +54,21 @@ def hello_user():
         print(form.description123.data)
         print(form.file_.data)
 
-        
+        name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
+        name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
 
 
-        return render_template("submitted.html")
+        return render_template("submitted.html",name=name)
     else:
 
         print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME"))
         print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID"))
+
+        name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
+        name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
       
 
-        return render_template("submit_declarations.html",submit_button_text="SUBMIT HERE")
+        return render_template("submit_declarations.html",name=name,submit_button_text="SUBMIT HERE")
 
 
 

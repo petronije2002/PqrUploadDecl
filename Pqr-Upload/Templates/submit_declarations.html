@@ -41,7 +41,6 @@ display: inline-block;
 </style>
 
 
-
 <script>
     // Add products to <table>
     function productsAdd() {
@@ -106,11 +105,12 @@ display: inline-block;
     
   </script>
 
-  <script>
-  function productDelete(ctl) {
-                $(ctl).parents("tr").remove();
-              }
+  
+
+<script>
+  $(document).ready(productsAdd())
   </script>
+  
 
 {% endblock %}
 
@@ -132,7 +132,6 @@ display: inline-block;
     </ul>
   {% endif %}
 {% endwith %}
-
 
 
 
@@ -200,6 +199,12 @@ display: inline-block;
 
 
 </form>
+
+<script>
+  function productDelete(ctl) {
+                $(ctl).parents("tr").remove();
+              }
+  </script>
 
 
 {% endblock %}
