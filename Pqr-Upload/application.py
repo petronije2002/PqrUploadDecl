@@ -28,11 +28,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 
-
-
-
-
-
 @app.route("/")
 
 def hello():
@@ -59,6 +54,11 @@ def hello_user():
 
         return render_template("submitted.html")
     else:
+
+        print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME"))
+        print(flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID"))
+      
+
         return render_template("submit_declarations.html",submit_button_text="SUBMIT HERE")
 
 
