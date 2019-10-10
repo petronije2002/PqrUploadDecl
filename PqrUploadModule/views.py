@@ -31,9 +31,6 @@ from . import forms
 # from sql_settings import uri_azure_sql,conn_string
 # import pyodbc
 
-
-
-
 # app = Flask(__name__, template_folder="Templates")
 
 
@@ -44,8 +41,6 @@ bootstrap = Bootstrap(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = uri_azure_sql
 # app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-
 
 
 @app.route("/")
@@ -98,11 +93,9 @@ def page_not_found(e):
 @app.route("/redirect_url")
 def redirect_url(e):
     return render_template("user.html", name="Nije validirano")
-
-
   
-if __name__ == '__main__':
-    app.run(debug=False)
+# if __name__ == '__main__':
+#     app.run(debug=False)
 
  
  
