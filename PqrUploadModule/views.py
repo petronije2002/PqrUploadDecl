@@ -10,6 +10,7 @@ import os
 
 from . import app
 from . import forms
+from . import bootstrap
 # basic_ = str(os.path.dirname( __file__ ))
 
 # if basic_ in sys.path:
@@ -34,7 +35,7 @@ from . import forms
 # app = Flask(__name__, template_folder="Templates")
 
 
-bootstrap = Bootstrap(app)
+# bootstrap = Bootstrap(app)
 
 
 # app.config['SECRET_KEY'] = 'This is a string 1234567'
