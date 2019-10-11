@@ -40,11 +40,6 @@ deactivate nondestructive
 VIRTUAL_ENV="/Users/Petar.Jovanovic/Documents/PqrProjects/Test/PqrUploadDecl/env"
 export VIRTUAL_ENV
 
-CONN_STRING="Driver={ODBC Driver 17 for SQL Server};Server=tcp:resource1.database.windows.net,1433;Database=PqrUploadDeclarations;Uid=pqruploadapp@resource1;PWD=pqruploadazure1!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
-export CONN_STRING
-
-
-
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH
