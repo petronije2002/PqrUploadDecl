@@ -67,8 +67,5 @@ def page_not_found(e):
 def redirect_url(e):
     return render_template("user.html", name="Nije validirano")
   
-# if __name__ == '__main__':
-#     app.run(debug=False)
 
- 
  
