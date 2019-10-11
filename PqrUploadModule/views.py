@@ -35,7 +35,7 @@ from . import bootstrap
 # app = Flask(__name__, template_folder="Templates")
 
 
-# bootstrap = Bootstrap(app)
+# lsbootstrap = Bootstrap(app)
 
 
 # app.config['SECRET_KEY'] = 'This is a string 1234567'
