@@ -6,3 +6,7 @@ from . import sql_settings
 from . import forms
 
 
+if __name__ == "__main__":
+    app.run()
+    
+
