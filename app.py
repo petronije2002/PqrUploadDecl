@@ -8,12 +8,10 @@ from werkzeug import secure_filename
 import sys
 import os
 from flask_bootstrap import Bootstrap
+from forms import DelcarationForm
+app=Flask(__name__,template_folder='Templates')
 
-from . import app
-from . import forms
-
-from . import bootstrap
-
+bootstrap = Bootstrap(app)
 
 
 @app.route("/")
@@ -32,7 +30,7 @@ def hello_user():
 
     if flask.request.method=='POST':
     
-        form = forms.DelcarationForm(flask.request.form)
+        form = DelcarationForm(flask.request.form)
 
         print(form.date_.data)
         print(form.incl_btw.data)
@@ -68,4 +66,5 @@ def redirect_url(e):
     return render_template("user.html", name="Nije validirano")
   
 
- 
+if __name__=="__main__":
+    app.run(debug=True)
