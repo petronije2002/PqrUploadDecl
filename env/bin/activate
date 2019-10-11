@@ -44,6 +44,13 @@ _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH
 
+FLASK_APP="app.py"
+CONN_STRING="{ODBC Driver 17 for SQL Server};Server=tcp:resource1.database.windows.net,1433;Database=PqrUploadDeclarations;Uid=pqruploadapp@resource1;PWD=pqruploadazure1!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+
+export FLASK_APP
+export CONN_STRING
+
+
 # unset PYTHONHOME if set
 # this will fail if PYTHONHOME is set to the empty string (which is bad anyway)
 # could use `if (set -u; : $PYTHONHOME) ;` in bash
