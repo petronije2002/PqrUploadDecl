@@ -7,41 +7,13 @@ from werkzeug import secure_filename
 
 import sys
 import os
+from flask_bootstrap import Bootstrap
 
 from . import app
 from . import forms
+
 from . import bootstrap
-# basic_ = str(os.path.dirname( __file__ ))
 
-# if basic_ in sys.path:
-#     pass
-# else: 
-
-#     sys.path.append(basic_)
-#     basic_ = basic_ +"/Pqr-Upload"
-
-#     sys.path.append(basic_)
-# from froms import DeclarationForm
-# # from flask_wtf import Form
-# from wtforms import StringField, SubmitField
-# from wtforms.validators import Required
-# from flask import request
-# f rom forms import DelcarationForm
-# from flask_wtf import FlaskForm
-# from flask_sqlalchemy import SQLAlchemy
-# from sql_settings import uri_azure_sql,conn_string
-# import pyodbc
-
-# app = Flask(__name__, template_folder="Templates")
-
-
-# lsbootstrap = Bootstrap(app)
-
-
-# app.config['SECRET_KEY'] = 'This is a string 1234567'
-# app.config['SQLALCHEMY_DATABASE_URI'] = uri_azure_sql
-# app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 @app.route("/")

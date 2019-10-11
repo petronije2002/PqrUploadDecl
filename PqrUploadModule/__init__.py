@@ -10,3 +10,5 @@ app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 bootstrap = Bootstrap(app)
+
+
