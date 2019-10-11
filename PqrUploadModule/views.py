@@ -19,7 +19,7 @@ from . import bootstrap
 @app.route("/")
 def hello():
     
-
+   
     name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
     name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
 
