@@ -30,7 +30,7 @@ def hello_user():
 
     if flask.request.method=='POST':
     
-        form = DelcarationForm(flask.request.form)
+        form = DelcarationForm(flask.request.form,csrf_enabled=False)
 
         print(form.date_.data)
         print(form.incl_btw.data)
@@ -67,6 +67,6 @@ def redirect_url(e):
   
  
 
- 
+
 if __name__=="__main__":
     app.run(debug=True)
