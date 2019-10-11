@@ -1,1 +1,0 @@
-from PqrUploadModule.app import app
