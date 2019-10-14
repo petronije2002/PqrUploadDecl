@@ -1,6 +1,6 @@
 from flask import Flask,render_template,flash
 from flask_bootstrap import Bootstrap
-from flask import redirect, url_for
+from flask import redirect, url_for,session
 import logging
 import flask
 from wtforms import TextField, BooleanField
@@ -62,17 +62,33 @@ class Delcarations_(db.Model):
 
 @app.route("/")
 def hello():
+
+    if 'tkn' in session:
+        name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
+        name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
+
+        tkn = flask.request.headers.get("X-MS-TOKEN-AAD-ACCESS-TOKEN")
+
+    else:
+
+        session['tkn'] = flask.request.headers.get("X-MS-TOKEN-AAD-ACCESS-TOKEN")
+
+        tkn = session['tkn']
+
+
    
-    name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
-    name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
+    # name = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-NAME")
+    # name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
 
-    token = flask.request.headers.get("X-MS-TOKEN-AAD-ACCESS-TOKEN")
+    # token = flask.request.headers.get("X-MS-TOKEN-AAD-ACCESS-TOKEN")
 
-    return render_template("base_menu.html", name=token)
+    return render_template("base_menu.html", name=tkn)
  
 
 @app.route("/Submit/", methods=['GET','POST'])
 def hello_user():
+
+    
 
     if flask.request.method=='POST':
     
