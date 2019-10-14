@@ -1,10 +1,8 @@
-import app
+from app import app
 
-from flask_sqlalchemy import SQLAlchemy
 # import evn variables for DB connection 
 
-db = SQLAlchemy(app)
-
+# from app import db
 
 class Delcarations(db.Model):
     __tablename__ = 'DECLARATIONS'

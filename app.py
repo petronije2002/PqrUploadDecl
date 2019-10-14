@@ -9,9 +9,15 @@ import sys
 import os
 from flask_bootstrap import Bootstrap
 from forms import DelcarationForm
-app=Flask(__name__,template_folder='Templates')
+from flask_sqlalchemy import SQLAlchemy
+
+
+app=Flask(__name__,template_folder='templates')
 
 bootstrap = Bootstrap(app)
+
+# db = SQLAlchemy(app)
+
 
 
 @app.route("/")
@@ -69,4 +75,4 @@ def redirect_url(e):
 
 
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
