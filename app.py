@@ -16,7 +16,6 @@ from flask_bootstrap import Bootstrap
 from forms import DelcarationForm
 from flask_sqlalchemy import SQLAlchemy
 import requests
-from get_token import authenticate_device_code
 
 
 
