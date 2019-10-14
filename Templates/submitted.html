@@ -41,7 +41,7 @@ display: inline-block;
 </style>
 
 
-<script>
+<!-- <script>
     // Add products to <table>
     function productsAdd() {
       // First check if a <tbody> tag exists, add one if not
@@ -55,17 +55,17 @@ display: inline-block;
         $("#declaration tbody").append(
 
         "<tr " + "id="+ $id_  + ">" +
-          "<td height='50' width='5%'>  <input type='date' name='date_' required pattern='[0-9]{4}/[0-9]{2}/[0-9]{2}'></td>" +
-          "<td height='50' width='5%'>  <input type ='text' id='description123' name='description123' size='30' maxlength='300'></td>" +
-          "<td height='50' width='5%'>  <input type='number' name='excl_btw' step ='any'  maxlength='10'></td>" +
+          "<td height='50' >  <input type='date' name='date_' required pattern='[0-9]{4}/[0-9]{2}/[0-9]{2}'></td>" +
+          "<td height='50' >  <input type ='text' id='description123' name='description123' size='30' maxlength='300'></td>" +
+          "<td height='50' >  <input type='number' name='excl_btw' step ='any'  maxlength='10'></td>" +
           
-          "<td height='50' width='5%'>  <input type='number' name='btw' step ='any' maxlength='10'></td>" +
-          "<td height='50' width='5%'>  <input type='number' name='incl_btw' step ='any' maxlength='10'></td>" +
+          "<td height='50' >  <input type='number' name='btw' step ='any' maxlength='10'></td>" +
+          "<td height='50' >  <input type='number' name='incl_btw' step ='any' maxlength='10'></td>" +
 
           "<td height='50' width='5%'>  <input type='file' id='avatar' name='file_'  accept='image/png, image/jpeg'></td>" +
 
 
-          "<td height='50' width='5%'>" + "<button type='button' "+ "onclick='productDelete(this); '"  + "class='btn btn-default'>" +   "<spanclass='glyphicon glyphicon-remove' />" + "</button>" + "</td>" +
+          "<td height='50' >" + "<button type='button' "+ "onclick='productDelete(this); '"  + "class='btn btn-default'>" +   "<spanclass='glyphicon glyphicon-remove' />" + "</button>" + "</td>" +
 
 
 
@@ -82,7 +82,7 @@ display: inline-block;
 
         $("#declaration tbody").append(
           "<tr " + "id="+ $id_ +  ">"  +
-          "<td height='30' width='5%'>  <input type='date' name='date_' required pattern='[0-9]{4}/[0-9]{2}/[0-9]{2}''></td>" +
+          "<td height='30'>  <input type='date' name='date_' required pattern='[0-9]{4}/[0-9]{2}/[0-9]{2}''></td>" +
           "<td height='30' width='5%'>  <input type='text' name='description123'  maxlength='300'></td>" +
           "<td height='30' width='5%'>  <input type='number'  name='excl_btw'  maxlength='10'></td>" +
           
@@ -103,7 +103,7 @@ display: inline-block;
 
     
     
-  </script>
+  </script> -->
 
   <script>
   function productDelete(ctl) {
@@ -119,18 +119,6 @@ display: inline-block;
 
 
 {% block content %}
-
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
-
-
 
 
 <div class="container">
@@ -151,7 +139,7 @@ display: inline-block;
 
     <div class="col-lm-6">
 
-      <form action="/Submit/" method="post" name="DelcarationForm" id="DelcarationForm">
+      <!-- <form action="/Submit/" method="post" name="DelcarationForm" id="DelcarationForm"> -->
 
       <table id="declaration"
               class="table table-bordered
