@@ -112,7 +112,7 @@ def hello_user():
         name_id = flask.request.headers.get("X-MS-CLIENT-PRINCIPAL-ID")
       
 
-        return render_template("submit_declarations.html",name=name,submit_button_text="SUBMIT HERE")
+        return render_template("submit_declarations.html",name=name_id,submit_button_text="SUBMIT HERE")
 
 
 @app.errorhandler(404)
