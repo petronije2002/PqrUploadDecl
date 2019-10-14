@@ -68,7 +68,7 @@ def hello():
 
     token = flask.request.headers.get("X-MS-TOKEN-AAD-ACCESS-TOKEN")
 
-    return render_template("base_menu.html", name=name)
+    return render_template("base_menu.html", name=token)
  
 
 @app.route("/Submit/", methods=['GET','POST'])
@@ -92,6 +92,7 @@ def hello_user():
         declr = Delcarations_()
 
         declr.date_ =  form.date_.data
+        
         declr.created_at = datetime.datetime.now()
         declr.description = str(form.description123.data)
         declr.excl_btw = float(form.excl_btw.data)
@@ -99,8 +100,6 @@ def hello_user():
         declr.incl_btw = float(form.incl_btw.data)
         declr.image = form.file_.data
 
-
-        
         db.session.add(declr)
         db.session.commit()
 
