@@ -25,6 +25,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 app.config['SECRET_KEY']='2132132dsadasd'
 
 bootstrap = Bootstrap(app)
+
 db = SQLAlchemy(app)
 
 class Delcarations_(db.Model):
